@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:RegistroConDetalle.UI.Registros"
         mc:Ignorable="d"
         Title="Registro de Ordenes" Height="490" Width="600" Icon="/Imagenes/Registro2.png">
-    
+    <Window.Foreground>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Foreground>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF0A4B51"/>
+            <GradientStop Color="#FF0091FF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid Height="449">
         <StackPanel Margin= "46,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Left"  Width="500" Height="650">
             
@@ -27,7 +38,7 @@
             <ComboBox x:Name = "SuplidorIdComboBox" SelectedValue ="{Binding SuplidorId}" Width="100" Height="25" Margin="-170,-25,0,0"/>
 
             <StackPanel Orientation="Vertical" >
-                <GroupBox Header="Detalle Moras" Margin="0,5,0,0">
+                <GroupBox Header="Detalle Moras"  Margin="0,5,0,0" >
                     <StackPanel>
                         
                         <!--ProductoId-->

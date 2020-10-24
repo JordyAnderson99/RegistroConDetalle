@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RegistroConDetalle.UI.Registros;
-//using RegistroConDetalle.UI.Consultas;
+using RegistroConDetalle.UI.Consultas;
 
 namespace RegistroConDetalle
 {
@@ -32,9 +32,9 @@ namespace RegistroConDetalle
             rOrd.Show();
         }
 
-        /*private void ConsultaOrdenesButton_Click(object sender, RoutedEventArgs e){
+        private void ConsultaOrdenesButton_Click(object sender, RoutedEventArgs e){
            cOrdenes cOrd = new cOrdenes();
             cOrd.Show();
-        }*/
+        }
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
 C:\Users\DELL\source\repos\RegistroConDetalle\App.xaml
-212486993
+3218944194
 8-696830057
-17-1830962706
+18280328353
 216238491746
-MainWindow.xaml;UI\Registros\rOrdenes.xaml;
+MainWindow.xaml;UI\Consultas\cOrdenes.xaml;UI\Registros\rOrdenes.xaml;
 
-False
+True
 

@@ -1,0 +1,62 @@
+<Window x:Class="RegistroConDetalle.UI.Consultas.cOrdenes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroConDetalle.UI.Consultas"
+        mc:Ignorable="d"
+        Title="Consulta de Pedidos" Height="400" Width="900">
+    <Window.Foreground>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Foreground>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF0A4B51"/>
+            <GradientStop Color="#FF0091FF" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <StackPanel Margin= "-120,50,-1,-1"  VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <!--Desde-->
+            <Label Content="Desde:" Margin="-680,-40,0,0" Width="57" ></Label>
+            <DatePicker x:Name="DesdeDatePicker" Width="145" Height="30" Margin="-500,-50,0,0" ></DatePicker>
+
+            <!--Hasta-->
+            <Label Content="Hasta:" Margin="-290,-40,0,0" Width="52" ></Label>
+            <DatePicker x:Name="HastaDatePicker" Width="145" Height="30" Margin="-110,-50,0,0" ></DatePicker>
+
+            <!--Boton Buscar-->
+            <Button x:Name ="BuscarButton" Margin="860,-60,0,0" Width = "120" Height = "40" Content="   Buscar" Click="BuscarButton_Click"/>
+            <Image Source= "/Imagenes/Buscar.png" Width="30" Height= "30" Margin="790,-60,0,0"/>
+
+            <!-- Filtro -->
+            <Label Content = "Filtro" Margin="120,-40,0,0" Width="66"></Label>
+            <ComboBox x:Name= "FiltroComboBox" Width= "100" Height= "30" Margin="240,-50,0,0">
+                <ComboBoxItem Content ="ProductoId"/>
+                <ComboBoxItem Content= "Descripcion"/>
+            </ComboBox>
+
+            <!-- Criterio -->
+            <Label Content= "Criterio:" Margin="420,-40,0,0" Width="62"/>
+            <TextBox x:Name= "CriterioTextBox" Width="100" Height= "30" Margin="560,-50,0,0"/>
+
+            <StackPanel>
+                <DataGrid x:Name="DetalleDataGrid"  IsReadOnly="true" Height="250" Width="860" AutoGenerateColumns="False" ItemsSource="{Binding Detalle}" Margin="120,20,0,0">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="      OrdenId     " Binding="{Binding OrdenId}"/>
+                        <DataGridTextColumn Header="      Fecha     " Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="      SuplidorId     " Binding="{Binding SuplidorId}"/>
+                        <DataGridTextColumn Header="      Monto       " Binding="{Binding Monto}"/>
+                        
+                    </DataGrid.Columns>
+                </DataGrid>
+
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</Window>
